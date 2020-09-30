@@ -1,0 +1,346 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: 'Fira Sans', sans-serif;
+    
+}
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+    
+    
+}
+#dotted{
+    border: dotted 6px white ;
+    border-bottom: none;
+    margin: 20px auto;
+    width: 70px;
+}
+h2{
+    font-size: 1.5rem;
+    text-align: center;
+    
+}
+p{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+a{
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+[class*="col-"]{
+    float: left;
+    padding: 10px;
+    
+}
+[class*="col-"]{
+    width: 100%;
+}
+/* navbar style start from here */
+.navbar{
+    background-color: #40868b;
+    padding: 1% 7%;
+}
+.navbar h1{
+    color: white;
+    margin: 0;
+    padding-top: 10px;
+}
+.nav-menu{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+.nav-menu a{
+    background-color: #0c6168;
+    border-radius: 10px;
+    margin: 7px 0px;
+    padding: 10px;
+    text-align: center;
+
+}
+.nav-menu a:hover{
+    background-color:tomato;
+}
+.navbar::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+/* navbar style end here */
+/* profile design start form here  */
+.profile{
+    padding: 130px 10px ;
+    position: relative;
+    text-align: center;
+
+    
+}
+.top-icon{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    transition: transform 2s;
+}
+.top-icon :hover{
+   transform: rotate(360deg);
+}
+.profile-desc h1{
+    font-family: 'Satisfy', cursive;
+    font-size: 3rem;
+}
+.profile-desc p{
+    color: gray;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    width: 90%;
+}
+.bottom-icon{
+    position: absolute;
+    left:  20px;
+    
+    
+    transition: transform 2s;
+}
+.profile.bottom-icon :hover{
+   transform: rotate(360deg);
+}
+.profile::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+/* about me */
+.about-me{
+    background-color: #39a4ac;
+    padding: 1% 7%;
+    color: white;
+    font-family: 'montserrat', sans-serif;
+}
+.about-me::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+.aboutme-desc{
+    background-color: teal;
+
+    
+    
+}
+.my-img       img {
+    border: 5px solid teal;
+    border-radius: 50%;
+    height: 320px;
+    width: 300px;
+    text-align: center;
+    position: relative
+    ;
+    left: 30px;
+    
+
+
+}
+.my-img p{
+    text-align: center;
+    width: 60%;
+    background-color: teal;
+    position: relative
+    ;
+    left: 30px;
+}
+.aboutme-hr{
+    clear: both;
+}
+/* pro-ex start here */
+.pro-ex{
+    padding: 1% 0%;
+   
+}
+.pro-ex .card{
+    background-color:#a39e9e;
+    border-radius: 5px;
+    padding: 10px;
+    height: 600px;
+    transition: 0.3s;
+    
+   
+
+}
+.card:hover{
+    box-shadow: 0 4px 8px 5px black;
+}
+.pro-ex::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+.card-icon{
+    text-align: center;
+}
+.circle-img{
+    border: 5px solid white;
+    border-radius: 50%;
+    
+}
+.card-title{
+    background-color:gray;
+    margin: 2px;
+}
+.skill-ex{
+    position: absolute;
+    
+    
+}
+.skill-container{
+    padding-right: 45px;
+
+}
+.skill-container li{
+    list-style: none;
+    font-weight: bolder;
+    margin: 30px 10px;
+    position: relative;
+    text-transform: uppercase;
+}
+.skill-container li::before{
+    content: '';
+    position: absolute;
+    top: calc(100%  + 5px);
+    width: 100%;
+    height: 10px;
+    left: 0px;
+    border-radius: 1000px;
+    
+    background-color:white
+    
+}
+.skill-container li::after{
+    content: '';
+    position: absolute;
+    top: calc(100%  + 5px);
+    width: 0%;
+    height: 10px;
+    left: 0px;
+    border-radius: 1000px;
+    background-color:red;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    
+}
+.skill-container li.html::after{
+    animation-name: html;
+}
+@keyframes html{
+    to{
+        width: 90%;
+    }
+}
+.skill-container li.css::after{
+    animation-name: css;
+}
+@keyframes css{
+    to{
+        width: 80%;
+        background-color: green;
+    }
+}
+.skill-container li.bost::after{
+    animation-name: bost;
+}
+@keyframes bost{
+    to{
+        width: 70%;
+        background-color: indigo;
+    }
+}
+.skill-container li.js::after{
+    animation-name: js;
+}
+@keyframes js{
+    to{
+        width: 50%;
+        background-color: blue;
+    }
+}
+.skill-container li.rjs::after{
+    animation-name: rjs;
+}
+@keyframes rjs{
+    to{
+        width: 80%;
+        background-color: brown;
+    }
+}
+.skill-container li.njs::after{
+    animation-name: njs;
+}
+@keyframes njs{
+    to{
+        width: 40%;
+        background-color: black;
+    }
+}
+.dotted-hr{
+    border:  dotted 10px solid black;
+    width: 70%;
+
+}
+.achivment{
+    padding: 1% 3%;
+    background-color: #39a4ac;
+    color: white;
+    padding: right;
+}
+.achivment::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+.cont{
+    padding: 1% %;
+    text-align: center;
+}
+.cont input,textarea{
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+}
+.cont button{
+    border: none;
+    border-radius: 12px;
+    background-color: gray;
+    color: black;
+    padding: 15px;
+    width: 60px;
+    margin: 10px;
+    cursor: pointer;
+    
+}
+.clink{
+    text-align: center;
+}
+.btn{
+border: none;
+border-radius: 15px;
+cursor: pointer;
+padding: 5px;
+margin: 10px;
+width: 50px;
+background-color: white;
+font-size: 32px;
+}
+.btn:hover{
+    background-color: grey;
+}
